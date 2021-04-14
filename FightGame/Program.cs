@@ -85,7 +85,7 @@ namespace FightGame
         }
         public static void Menu()
         {
-            Console.WriteLine("Welcome to the Alf Arena.!\n\nChoose your opponent.\n");
+            Console.WriteLine("Welcome to the Alf Arena.\n\nChoose your opponent.\n");
             Console.WriteLine($"{O0B1}Rashiid{O0B2}"); //0
             Console.WriteLine($"{O1B1}Jean-Michel{O1B2}"); //1
             Console.WriteLine($"{O2B1}Herman{O2B2}\n"); //2
