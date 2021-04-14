@@ -6,7 +6,7 @@ namespace FightGame
 {
     class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             Console.CursorVisible = false;
             O0B1 = "[";
@@ -79,18 +79,18 @@ namespace FightGame
                 else if (key.Key == ConsoleKey.Enter)
                 {
                     keepLooping = false;
-                    Fight();
+                    Start();
                 }
             }
         }
         public static void Menu()
         {
-            Console.WriteLine("Welcome to ALFRED'S ARENA!\n\nChoose your opponent.\n");
+            Console.WriteLine("Welcome to the Alf Arena.!\n\nChoose your opponent.\n");
             Console.WriteLine($"{O0B1}Rashiid{O0B2}"); //0
-            Console.WriteLine($"{O1B1}Opponent 2{O1B2}"); //1
-            Console.WriteLine($"{O2B1}Opponent 3{O2B2}\n"); //2
+            Console.WriteLine($"{O1B1}Jean-Michel{O1B2}"); //1
+            Console.WriteLine($"{O2B1}Herman{O2B2}\n"); //2
             Console.WriteLine("Press the arrow keys to choose your opponent.");
-            Console.WriteLine(CharacterChoose);
+            //Console.WriteLine(CharacterChoose);
         }
     }
 }
