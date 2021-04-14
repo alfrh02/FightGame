@@ -16,37 +16,49 @@ namespace FightGame
             CharacterChoose = 0;
 
             bool keepLooping = true;
-            while (keepLooping == true)
+            while (keepLooping)
             {
                 if (CharacterChoose == 0)
                 {
                     O0B1 = "[";
                     O0B2 = "]";
+                    Console.Clear();
+                    Menu();
                 }
                 else
                 {
                     O0B1 = "";
                     O0B2 = "";
+                    Console.Clear();
+                    Menu();
                 }
                 if (CharacterChoose == 1)
                 {
                     O1B1 = "[";
                     O1B2 = "]";
+                    Console.Clear();
+                    Menu();
                 }
                 else
                 {
                     O1B1 = "";
                     O1B2 = "";
+                    Console.Clear();
+                    Menu();
                 }
                 if (CharacterChoose == 2)
                 {
                     O2B1 = "[";
                     O2B2 = "]";
+                    Console.Clear();
+                    Menu();
                 }
                 else
                 {
                     O2B1 = "";
                     O2B2 = "";
+                    Console.Clear();
+                    Menu();
                 }
 
                 var key = Console.ReadKey();
