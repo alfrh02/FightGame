@@ -88,6 +88,7 @@ namespace FightGame
             Console.WriteLine($"{choice1_1}Attack{choice1_2} {choice2_1}Defend{choice2_2}\n");
             Console.Write($"HP : {playerHealth} ");
             healthBar = "";
+            playerHealthCounter = playerHealth / 2;
             for (int i = 0; i <= playerHealthCounter; i++)
             {
                 healthBar += "█";
