@@ -92,14 +92,14 @@ namespace FightGame
                 }
                 else
                 {
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1000);
                     Start();
                 }
             }
             else if (choice == 1)
             {
                 Console.WriteLine($"You defend yourself from any incoming attacks except the enemy cant attakc yet i havent added that yet lol");
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 Start();
             }
             
