@@ -1,9 +1,10 @@
 ﻿using System;
-using static FightGame.Strings;
-using static FightGame.Battle;
-using static FightGame.Store;
+using System.Threading;
+using static Alfight.Strings;
+using static Alfight.Battle;
+using static Alfight.Store;
 
-namespace FightGame
+namespace Alfight
 {
     class Program
     {
@@ -89,6 +90,34 @@ namespace FightGame
                     Console.Clear();
                     Menu();
                 }
+                if (CharacterChoose == 5)
+                {
+                    HB1 = "[";
+                    HB2 = "]";
+                    Console.Clear();
+                    Menu();
+                }
+                else
+                {
+                    HB1 = "";
+                    HB2 = "";
+                    Console.Clear();
+                    Menu();
+                }
+                if(CharacterChoose == 6)
+                {
+                    QB1 = "[";
+                    QB2 = "]";
+                    Console.Clear();
+                    Menu();
+                }
+                else
+                {
+                    QB1 = "";
+                    QB2 = "";
+                    Console.Clear();
+                    Menu();
+                }
 
                 var key = Console.ReadKey();
                 if (key.Key == ConsoleKey.UpArrow)
@@ -117,20 +146,84 @@ namespace FightGame
                         Console.Clear();
                         Buy();
                     }
+                    else if (CharacterChoose == 5)
+                    {
+                        Console.Clear();
+                        Help();
+                    }
+                    else if (CharacterChoose == 6)
+                    {
+                        Console.Clear();
+                        Environment.Exit(0);
+                    }
                 }
             }
         }
         public static void Menu()
         {
             Console.WriteLine("Welcome to the Alf Arena.\n\nChoose your opponent.\n");
-            Console.WriteLine($"  >  {O0B1}Herman{O0B2}"); //0
-            Console.WriteLine($"  >  {O1B1}Jean-Michel{O1B2}"); //1
-            Console.WriteLine($"  >  {O2B1}Joëlle{O2B2}"); //2
-            Console.WriteLine($"  >  {O3B1}Rashiid{O3B2}\n"); //3
+            Console.Write("  >  ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"{O0B1}Herman{O0B2}\n"); //0
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("  >  ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"{O1B1}Jean-Michel{O1B2}\n"); //1
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("  >  ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"{O2B1}Joëlle{O2B2}\n"); //2
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("  >  ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"{O3B1}Rashiid{O3B2}\n\n"); //3
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Press the arrow keys to choose your opponent. Alternatively, visit the...\n");
-            Console.WriteLine($"  >  {STB1}Store{STB2}\n"); //4
-            Console.WriteLine($"You have {currency} coins.");
-            Console.WriteLine(CharacterChoose);
+            Console.Write($"  >  ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write($"{STB1}Store{STB2}\n\n"); //4
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("You have ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write($"{currency}");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(" coins.\n\n");
+            Console.Write($"  >  ");
+            Console.Write($"{HB1}Help{HB2}\n"); //5
+            Console.Write($"  >  ");
+            if (CharacterChoose == 6)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            Console.Write($"{QB1}Quit{QB2}\n"); //6
+            Console.ForegroundColor = ConsoleColor.White;
+            //Console.WriteLine(CharacterChoose); //debugging
+        }
+        public static void Help()
+        {
+            Console.WriteLine("The Alf Arena is a place which gets progressively harder as you battle each opponent.\n");
+            Console.Write("Each opponent rewards you with a certain amount of coins you can use in exchange for ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("AP (armour points)");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(" at the");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(" store.\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Each opponent has more AP than the last.");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write(" Herman ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("starts with 0.\n\n");
+            Console.Write("Don't spam keys if you're on Windows. Windows Console sucks.\n\n");
+            Thread.Sleep(2000);
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }

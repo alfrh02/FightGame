@@ -1,7 +1,7 @@
 C:\Users\vulca\source\repos\FightGame\FightGame\bin\Debug\FightGame.exe.config
 C:\Users\vulca\source\repos\FightGame\FightGame\bin\Debug\FightGame.exe
 C:\Users\vulca\source\repos\FightGame\FightGame\bin\Debug\FightGame.pdb
-C:\Users\vulca\source\repos\FightGame\FightGame\obj\Debug\FightGame.csprojAssemblyReference.cache
 C:\Users\vulca\source\repos\FightGame\FightGame\obj\Debug\FightGame.csproj.CoreCompileInputs.cache
 C:\Users\vulca\source\repos\FightGame\FightGame\obj\Debug\FightGame.exe
 C:\Users\vulca\source\repos\FightGame\FightGame\obj\Debug\FightGame.pdb
+C:\Users\vulca\source\repos\FightGame\FightGame\obj\Debug\FightGame.csprojAssemblyReference.cache

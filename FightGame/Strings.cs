@@ -1,6 +1,6 @@
-﻿using static FightGame.Store;
+﻿using static Alfight.Store;
 
-namespace FightGame
+namespace Alfight
 {
     public static class Strings
     {
@@ -29,6 +29,12 @@ namespace FightGame
         public static string STB1 = "";
         public static string STB2 = "";
 
+        public static string HB1 = "";
+        public static string HB2 = "";
+
+        public static string QB1 = "";
+        public static string QB2 = "";
+
         //
 
         public static string L1A = "";
@@ -51,13 +57,13 @@ namespace FightGame
 
         public static void CharacterChooser()
         {
-            if (CharacterChoose == 5)
+            if (CharacterChoose == 7)
             {
                 CharacterChoose = 0;
             }
             else if (CharacterChoose == -1)
             {
-                CharacterChoose = 4;
+                CharacterChoose = 6;
             }
         }
 

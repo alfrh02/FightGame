@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading;
-using static FightGame.Strings;
-using static FightGame.Program;
-using static FightGame.Store;
+using static Alfight.Strings;
+using static Alfight.Program;
+using static Alfight.Store;
 
-namespace FightGame
+namespace Alfight
 {
     class Battle
     {
@@ -142,6 +142,15 @@ namespace FightGame
                         playersTurn = false;
                         Fight();
                     }
+                    /*
+                    else if (key.Key == ConsoleKey.Escape)
+                    {
+                        enemyHealth = 100;
+                        playerHealth = 100;
+                        Console.Clear();
+                        Main();
+                    }
+                    */
                 }
                 else
                 {
@@ -163,7 +172,9 @@ namespace FightGame
             {
                 healthBar += "█";
             }
+            Console.ForegroundColor = ConsoleColor.Red; 
             Console.WriteLine($"{healthBar}");
+            Console.ForegroundColor = ConsoleColor.White;
             armourBarCounter = playerArmour / 2;
             if (playerArmour > 0)
             {
@@ -172,7 +183,9 @@ namespace FightGame
                     armourBar += "|";
                 }
                 Console.WriteLine($"AP : {playerArmour}");
+                Console.BackgroundColor = ConsoleColor.Blue;
                 Console.WriteLine($"{armourBar}");
+                Console.BackgroundColor = ConsoleColor.Black;
             }
         }
         public static void Fight()
@@ -183,6 +196,10 @@ namespace FightGame
             if (CharacterChoose == 2)
             {
                 female = true;
+            }
+            else
+            {
+                female = false;
             }
 
             if (choice == 0)
@@ -220,6 +237,7 @@ namespace FightGame
                             }
                             enemyHealth = 100;
                             playerHealth = 100;
+                            playersTurn = true;
                             Thread.Sleep(500);
                             Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();

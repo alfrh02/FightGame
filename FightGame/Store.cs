@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
-using static FightGame.Strings;
-using static FightGame.Program;
+using static Alfight.Strings;
+using static Alfight.Program;
 
-namespace FightGame
+namespace Alfight
 {
     class Store
     {
@@ -151,14 +151,39 @@ namespace FightGame
                             break;
                     }
                 }
+                if (key.Key == ConsoleKey.Escape)
+                {
+                    Main();
+                }
             }
         }
         public static void StoreText()
         {
             Console.WriteLine("Welcome to the Alf Arena Store.\n");
-            Console.WriteLine($"  >  {L1A}25 AP{L1A2}");
-            Console.WriteLine($"  >  {L2A}50 AP{L2A2}");
-            Console.WriteLine($"  >  {L3A}100 AP{L3A2}\n");
+            Console.Write("  >  ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{L1A}25 AP{L1A2} ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("   ");
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.Write("||||||||||||\n");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write("  >  ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{L2A}50 AP{L2A2}");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("   ");
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.Write("||||||||||||||||||||||||\n");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write("  >  ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{L3A}100 AP{L3A2}");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("   ");
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.Write("||||||||||||||||||||||||||||||||||||||||||||||||||\n\n");
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine($"  >  {STB1}Main Menu{STB2}");
             if (playerBoughtArmour)
             {
